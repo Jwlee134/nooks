@@ -19,8 +19,8 @@ const useInput = (initialValue, validator) => {
 };
 
 const App = () => {
-  const maxLen = (value) => !value.includes("@");
-  const name = useInput("Mr.", maxLen);
+  const validator = (value) => !value.includes("@");
+  const name = useInput("Mr.", validator);
   return (
     <div className="App">
       <h1>Hello</h1>
