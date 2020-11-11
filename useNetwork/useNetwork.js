@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 const useNetwork = (onChange) => {
+  // navigator.onLine = boolean
   const [status, setStatus] = useState(navigator.onLine);
   const handleChange = () => {
     if (typeof onChange === "function") {
