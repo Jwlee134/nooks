@@ -3,11 +3,9 @@ import ReactDOM from "react-dom";
 import { useAxios } from "./useAxios";
 
 const App = () => {
-  const { loading, data, error, refetch } = useAxios({
-    url:
-      "https://cors-anywhere.herokuapp.com/https://yts.am/api/v2/list_movies.json",
+  const { loading, data, refetch } = useAxios({
+    url: "https://yts-proxy.now.sh/list_movies.json?sort_by=rating",
   });
-  console.log(`Loading:${loading}\nError:${error}\nData:${data}`);
   return (
     <div>
       <h1>{data && data.status}</h1>
